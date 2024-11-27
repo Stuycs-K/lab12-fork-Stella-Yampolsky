@@ -39,7 +39,7 @@ int main() {
 
   int status;
   pid_t finished = wait(&status);
-  if (WIFEXITED(status)) {
+  if (WIFEXITED(status)){
     int sleep_time = WEXITSTATUS(status);
     printf("Main Process %d is done. Child %d slept for %d seconds\n", getpid(), finished, sleep_time);
   }
